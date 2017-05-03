@@ -1,0 +1,14 @@
+body { font:normal 9pt 굴림, Gulim; line-height:12pt; }
+textarea { font-size:9pt; }
+input[type$='button'] { font-size:9pt; }
+button { font-size:9pt; }
+#panel_left { float:left; width:600px; background-color:#eee; overflow:hidden; padding:10px 0; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; }
+#panel_right { float:left; width:300px; margin-left:20px; }
+#template_item { display:none; }
+#message { width:300px; height:370px; border:0; }
+.padbottom { padding-bottom:5px; }
+.viewpanel { float:left; width:200px; }
+.center { text-align:center; }
+.sub_panel_inserted_coin { background-color:#ffdbdb; padding:10px; text-align:center; font:bold 10pt 굴림; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; }
+.sub_panel_insert_button { padding:5px; text-align:center; line-height:25px; }
+.sub_panel_message_title { padding:7px; margin-bottom:5px; background-color:#eee; font:bold 9pt 굴림; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; } 

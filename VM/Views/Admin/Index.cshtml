@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/clientJS/Actions.js"></script>
+<div class="container">
+    <h2>Training</h2>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="clearTextBox();">Add New </button><br /><br />
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    Код
+                </th>
+                <th>
+                    Цена
+                </th>
+                <th>
+                    Количества
+                </th>
+                <th>
+                    Наименование
+                </th>
+                <th>
+                    Картинка
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbody" id="tbody"></tbody>
+    </table>
+</div>
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Add</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="id">id</label>
+                        <input type="text" class="form-control" id="id" placeholder="id" disabled="disabled" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Price">Price</label>
+                        <input type="text" class="form-control" id="Price" placeholder="Price" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Count">Count</label>
+                        <input type="text" class="form-control" id="Count" placeholder="Count" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Name</label>
+                        <input type="text" class="form-control" id="Name" placeholder="Name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="SrcImg">SrcImg</label>
+                        <input id="fileInput" type="file" />
+                        @*<input type="file" value="" name="photo" id="SrcImgS" placeholder="SrcImgS" multiple accept="image/*,image/jpeg">
+                        <input type="image" class="form-control" id="SrcImg" placeholder="SrcImg" />*@
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnAdd" onclick="return Create();">Add</button>
+                <button type="button" class="btn btn-primary" id="btnUpdate" style="display:none;" onclick="Update();">Update</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

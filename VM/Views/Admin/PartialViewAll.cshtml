@@ -1,0 +1,26 @@
+﻿@model IEnumerable<VM.Models.Product>
+
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Count)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            <img src="~/images/@item.SrcImg" />
+        </td>
+        <td>
+            <a href="#" onclick="return Details(@item.id)">Edit</a> | <a href="#" onclick="Delele(@item.id)">Delete</a>
+        </td>
+    </tr>
+}
